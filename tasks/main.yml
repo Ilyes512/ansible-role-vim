@@ -7,4 +7,6 @@
 
 - name: VIM | Set VIM as default editor
   sudo: yes
-  command: update-alternatives --set editor /usr/bin/vim.basic
+  alternatives:
+    name: editor
+    path: /usr/bin/vim.basic
