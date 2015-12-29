@@ -1,0 +1,9 @@
+---
+- name: VIM | Install VIM
+  sudo: yes
+  apt:
+    pkg: vim
+    state: latest
+
+- name: VIM | Set VIM as default editor
+  command: update-alternatives --set editor /usr/bin/vim.basic
