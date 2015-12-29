@@ -3,7 +3,7 @@
   sudo: yes
   apt:
     pkg: vim
-    state: "{{ base_packages_state }}"
+    state: "{{ vim_package_state }}"
     update_cache: yes
     cache_valid_time: 3600
 
