@@ -3,7 +3,9 @@
   sudo: yes
   apt:
     pkg: vim
-    state: latest
+    state: "{{ base_packages_state }}"
+    update_cache: yes
+    cache_valid_time: 3600
 
 - name: VIM | Set VIM as default editor
   sudo: yes
