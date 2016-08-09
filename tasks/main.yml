@@ -1,14 +1,14 @@
 ---
-- name: VIM | Install VIM
-  sudo: yes
+- name: Install VIM
+  become: yes
   apt:
     pkg: vim
     state: "{{ vim_package_state }}"
     update_cache: yes
     cache_valid_time: 3600
 
-- name: VIM | Set VIM as default editor
-  sudo: yes
+- name: Set VIM as default editor
+  become: yes
   alternatives:
     name: editor
     path: /usr/bin/vim.basic
